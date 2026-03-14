@@ -1,80 +1,86 @@
 import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Decorative Background Element */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-violet-100/40 via-transparent to-transparent -z-10"></div>
 
+      <div className="max-w-4xl mx-auto px-6">
+        
         {/* Header */}
-        <h2 className="text-4xl font-bold text-center text-[#1E5C96] mb-12">
-          Contact Us
-          <span className="block w-16 h-1 bg-[#90AB8B] mx-auto mt-3 rounded"></span>
-        </h2>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
-
-          {/* Contact Info */}
-          <div className="flex flex-col gap-8">
-
-            <div className="flex items-start gap-4">
-              <Mail className="text-green-600 mt-1" size={24} />
-              <p className="text-gray-700">
-                weareinnovationcatalyst@gmail.com
-              </p>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <Phone className="text-green-600 mt-1" size={24} />
-              <p className="text-gray-700">
-                9640864444 | 8096574368
-              </p>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <MapPin className="text-green-600 mt-1" size={24} />
-              <p className="text-gray-700">
-                Hyderabad, Telangana, India
-              </p>
-            </div>
-
-          </div>
-
-          {/* Contact Form */}
-          <form className="flex flex-col">
-
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              className="w-full p-3 mb-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-600"
-            />
-
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              className="w-full p-3 mb-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-600"
-            />
-
-            <textarea
-              rows="5"
-              placeholder="Message"
-              required
-              className="w-full p-3 mb-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-600"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-green-600 to-emerald-700 text-white px-8 py-3 rounded-lg font-semibold hover:-translate-y-1 transition shadow-md"
-            >
-              Submit
-            </button>
-
-          </form>
-
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-violet-900 mb-4">
+            Send us a Message
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto text-lg leading-relaxed">
+            Have a question or a project in mind? Fill out the form below and 
+            our team will get back to you within 24 hours.
+          </p>
+          <span className="block w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full"></span>
         </div>
+
+        {/* Form Container */}
+        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-violet-900/5 border border-white relative">
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            
+            {/* Name Input */}
+            <div className="sm:col-span-1">
+              <label className="block text-sm font-bold text-violet-900 mb-3 ml-1 uppercase tracking-wider">
+                Your Name
+              </label>
+              <input
+                type="text"
+                placeholder="John Doe"
+                required
+                className="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition-all shadow-sm placeholder:text-slate-400"
+              />
+            </div>
+
+            {/* Email Input */}
+            <div className="sm:col-span-1">
+              <label className="block text-sm font-bold text-violet-900 mb-3 ml-1 uppercase tracking-wider">
+                Email Address
+              </label>
+              <input
+                type="email"
+                placeholder="john@example.com"
+                required
+                className="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition-all shadow-sm placeholder:text-slate-400"
+              />
+            </div>
+
+            {/* Message Input */}
+            <div className="sm:col-span-2">
+              <label className="block text-sm font-bold text-violet-900 mb-3 ml-1 uppercase tracking-wider">
+                How can we help?
+              </label>
+              <textarea
+                rows="6"
+                placeholder="Tell us about your goals..."
+                required
+                className="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition-all shadow-sm placeholder:text-slate-400 resize-none"
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <div className="sm:col-span-2 flex justify-center mt-4">
+              <button
+                type="submit"
+                className="group relative flex items-center justify-center gap-3 bg-violet-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-violet-800 hover:-translate-y-1 active:translate-y-0 transition-all shadow-lg shadow-violet-200"
+              >
+                <span>Send Message</span>
+                <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Optional Footer Text */}
+        <p className="text-center mt-10 text-slate-400 text-sm">
+          We respect your privacy. No spam, ever.
+        </p>
       </div>
     </section>
   );

@@ -39,17 +39,10 @@ const Hero = () => {
           <div className="flex gap-4 flex-wrap justify-center">
 
             <Link
-              to="#about"
+              to="/learnmore"
               className="bg-gradient-to-r from-green-600 to-emerald-700 px-7 py-3 rounded-lg font-semibold hover:-translate-y-1 transition shadow-lg"
             >
               Learn More
-            </Link>
-
-            <Link
-              to="#contact"
-              className="bg-white text-[#1E5C96] border-2 border-[#1E5C96] px-7 py-3 rounded-lg font-semibold hover:bg-[#1E5C96] hover:text-white transition"
-            >
-              Partner With Us
             </Link>
 
           </div>
