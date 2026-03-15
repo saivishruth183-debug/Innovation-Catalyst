@@ -11,35 +11,35 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
         
         {/* Logo */}
-        <HashLink smooth to="/#home" className="flex items-center gap-2 font-bold text-blue-700 text-lg cursor-pointer">
+        <Link to="/home" className="flex items-center gap-2 font-bold text-blue-700 text-lg cursor-pointer">
           <img src={Logo} alt="logo" className="h-8" />
           <span>Innovation Catalyst</span>
-        </HashLink>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 font-medium text-gray-700">
           <li>
-            <Link smooth to="/home" className="hover:text-blue-700 transition">
+            <Link to="/home" className="hover:text-blue-700 transition">
               Home
             </Link>
           </li>
           <li>
-            <Link smooth to="/about" className="hover:text-blue-700 transition">
+            <Link to="/about" className="hover:text-blue-700 transition">
               About Us
             </Link>
           </li>
           <li>
-            <Link smooth to="/offer" className="hover:text-blue-700 transition">
+            <Link to="/offer" className="hover:text-blue-700 transition">
               What We Offer
             </Link>
           </li>
           <li>
-            <Link smooth to="/career" className="hover:text-blue-700 transition">
+            <Link to="/career" className="hover:text-blue-700 transition">
               Career
             </Link>
           </li>
           <li>
-            <Link smooth to="/contact" className="hover:text-blue-700 transition">
+            <Link to="/contact" className="hover:text-blue-700 transition">
               Contact
             </Link>
           </li>
@@ -62,11 +62,11 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <ul className="md:hidden mt-4 bg-white rounded-xl shadow-lg p-6 flex flex-col gap-4 font-medium text-gray-700">
-          <li><HashLink smooth to="/#home">Home</HashLink></li>
-          <li><HashLink smooth to="/#about">About Us</HashLink></li>
-          <li><HashLink smooth to="/#offer">What We Offer</HashLink></li>
-          <li><HashLink smooth to="/#career">Career</HashLink></li>
-          <li><HashLink smooth to="/#contact">Contact</HashLink></li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/offer">What We Offer</Link></li>
+          <li><Link to="/career">Career</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
           <li>
             <Link to="/login" className="bg-linear-to-r from-blue-700 to-green-600 text-white px-5 py-2 rounded-full text-center">
               Login

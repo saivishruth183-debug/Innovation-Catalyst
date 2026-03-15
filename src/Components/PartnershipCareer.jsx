@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PartnershipCareer = () => {
   return (
@@ -15,12 +16,12 @@ const PartnershipCareer = () => {
             help students become confident communicators.
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="bg-white text-[#1E5C96] border-2 border-[#1E5C96] px-8 py-3 rounded-lg font-semibold hover:bg-[#1E5C96] hover:text-white transition"
           >
             Partner With Us
-          </a>
+          </Link>
         </div>
       </section>
 

@@ -1,16 +1,16 @@
 import React from "react";
 import Logo from "../assets/Logo.jpeg";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { HashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  // Mapping display names to their corresponding anchor IDs
+  
   const links = [
-    { name: "Home", path: "/#home" },
-    { name: "About Us", path: "/#about" },
-    { name: "What We Offer", path: "/#offer" },
-    { name: "Career", path: "/#career" },
-    { name: "Contact", path: "/#contact" },
+    { name: "Home", path: "/home" },
+    { name: "About Us", path: "/about" },
+    { name: "What We Offer", path: "/offer" },
+    { name: "Career", path: "/career" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
           
           {/* Brand & Mission */}
           <div className="flex flex-col space-y-4">
-            <HashLink smooth to="/#home" className="flex items-center gap-3 group w-fit">
+            <Link smooth to="/home" className="flex items-center gap-3 group w-fit">
               <img
                 src={Logo}
                 alt="Logo"
@@ -29,7 +29,7 @@ const Footer = () => {
               <span className="text-2xl font-extrabold tracking-tight">
                 Innovation Catalyst
               </span>
-            </HashLink>
+            </Link>
             <p className="text-violet-100/80 leading-relaxed max-w-xs">
               Empowering the next generation of innovators through expert-led 
               curriculum and hands-on mentorship.
@@ -44,13 +44,13 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               {links.map((link) => (
                 <li key={link.name}>
-                  <HashLink 
+                  <Link 
                     smooth 
                     to={link.path} 
                     className="text-violet-100/90 hover:text-green-400 hover:translate-x-1 transition-all inline-block"
                   >
                     {link.name}
-                  </HashLink>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,8 +98,8 @@ const Footer = () => {
             © {new Date().getFullYear()} Innovation Catalyst. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-violet-200/60">
-            <HashLink smooth to="/privacy" className="hover:text-white transition">Privacy Policy</HashLink>
-            <HashLink smooth to="/terms" className="hover:text-white transition">Terms of Service</HashLink>
+            <Link smooth to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+            <Link smooth to="/terms" className="hover:text-white transition">Terms of Service</Link>
           </div>
         </div>
       </div>

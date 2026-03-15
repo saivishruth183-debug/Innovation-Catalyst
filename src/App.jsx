@@ -9,13 +9,15 @@ import About from './Components/About'
 import Offers from './Components/Offers'
 import PartnershipCareer from './Components/PartnershipCareer'
 import Contact from './Components/Contact'
+import ScrollToTop from './Pages/ScrolltoTop'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/offer" element={<Offers />} />
         <Route path="/career" element={<PartnershipCareer />} />
