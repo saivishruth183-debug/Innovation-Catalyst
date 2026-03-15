@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from '../assets/Logo.jpeg';
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,29 +19,29 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 font-medium text-gray-700">
           <li>
-            <HashLink smooth to="/#home" className="hover:text-blue-700 transition">
+            <Link smooth to="/home" className="hover:text-blue-700 transition">
               Home
-            </HashLink>
+            </Link>
           </li>
           <li>
-            <HashLink smooth to="/#about" className="hover:text-blue-700 transition">
+            <Link smooth to="/about" className="hover:text-blue-700 transition">
               About Us
-            </HashLink>
+            </Link>
           </li>
           <li>
-            <HashLink smooth to="/#offer" className="hover:text-blue-700 transition">
+            <Link smooth to="/offer" className="hover:text-blue-700 transition">
               What We Offer
-            </HashLink>
+            </Link>
           </li>
           <li>
-            <HashLink smooth to="/#career" className="hover:text-blue-700 transition">
+            <Link smooth to="/career" className="hover:text-blue-700 transition">
               Career
-            </HashLink>
+            </Link>
           </li>
           <li>
-            <HashLink smooth to="/#contact" className="hover:text-blue-700 transition">
+            <Link smooth to="/contact" className="hover:text-blue-700 transition">
               Contact
-            </HashLink>
+            </Link>
           </li>
           <li>
             <Link to="/login" className="bg-linear-to-r from-blue-700 to-green-600 text-white px-5 py-2 rounded-full shadow hover:shadow-lg transition">

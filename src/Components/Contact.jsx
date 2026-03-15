@@ -3,7 +3,7 @@ import { Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-slate-50 relative overflow-hidden">
+    <section id="contact" className="py-30 bg-slate-50 relative overflow-hidden">
       {/* Decorative Background Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-violet-100/40 via-transparent to-transparent -z-10"></div>
 

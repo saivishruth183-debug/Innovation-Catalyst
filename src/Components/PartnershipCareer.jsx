@@ -4,7 +4,7 @@ const PartnershipCareer = () => {
   return (
     <>
       {/* Partnership Section */}
-      <section className="bg-linear-to-br from-[#1E5C96] via-[#90AB8B] to-[#134477] text-white py-20 text-center">
+      <section className="bg-linear-to-br from-[#1E5C96] via-[#90AB8B] to-[#134477] text-white py-30 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-6">
             Partner With Innovation Catalyst
