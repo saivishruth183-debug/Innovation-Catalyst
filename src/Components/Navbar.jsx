@@ -24,11 +24,6 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about" className="hover:text-blue-700 transition">
-              About Us
-            </Link>
-          </li>
-          <li>
             <Link to="/offer" className="hover:text-blue-700 transition">
               What We Offer
             </Link>
@@ -63,7 +58,6 @@ const Navbar = () => {
       {open && (
         <ul className="md:hidden mt-4 bg-white rounded-xl shadow-lg p-6 flex flex-col gap-4 font-medium text-gray-700">
           <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
           <li><Link to="/offer">What We Offer</Link></li>
           <li><Link to="/career">Career</Link></li>
           <li><Link to="/contact">Contact</Link></li>

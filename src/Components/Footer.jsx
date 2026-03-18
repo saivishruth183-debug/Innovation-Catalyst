@@ -76,7 +76,7 @@ const Footer = () => {
                   <Phone className="text-green-400" size={20} />
                 </div>
                 <span className="text-sm text-violet-100/90">
-                  +91 96408 64444  |  +91 8096574368
+                  +91 8096574368
                 </span>
               </div>
 
