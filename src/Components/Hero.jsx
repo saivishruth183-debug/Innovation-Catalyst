@@ -11,18 +11,20 @@ const cards = [
     title: "Catalyst Student Development",
     tag: "Life Skills",
     description: "Empowering students with essential life skills beyond academics. Through interactive sessions and structured skill development, we build confidence, leadership, and problem-solving abilities.",
-    image: Catalyst
+    image: Catalyst,
+    route: "/catalyst"
   },
   {
     id: 2,
     title: "Rolabz Robotics",
     tag: "EdTech Platform",
     description: "A hands-on web platform for robotics and electronics. Design circuits, write code, and upload directly to hardware like Arduino. Includes classroom tools and curriculum mapping.",
-    image: Rolabz
+    image: Rolabz,
+    // route: "/rolabz"
   },
 ];
 
-const Card = ({ title, description, image, tag }) => (
+const Card = ({ title, description, image, tag, route }) => (
   <div className="group bg-white rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-violet-200 border border-slate-100 transition-all duration-500 overflow-hidden flex flex-col h-full text-left">
     <div className="relative h-64 w-full overflow-hidden bg-slate-50">
       <div className="absolute top-4 left-4 z-10">
@@ -45,11 +47,11 @@ const Card = ({ title, description, image, tag }) => (
       <p className="text-slate-600 leading-relaxed mb-8 flex-grow">
         {description}
       </p>
-      
-      <button className="flex items-center gap-2 text-violet-700 font-bold hover:gap-3 transition-all mt-auto w-fit group/btn cursor-pointer">
+      {/* Wrap button in Link for routing */}
+      <Link to={route} className="flex items-center gap-2 text-violet-700 font-bold hover:gap-3 transition-all mt-auto w-fit group/btn cursor-pointer">
         Learn More 
         <ArrowUpRight size={20} className="group-hover/btn:rotate-45 transition-transform" />
-      </button>
+      </Link>
     </div>
   </div>
 );

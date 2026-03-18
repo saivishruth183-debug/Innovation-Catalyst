@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../Components/Hero'
 import About from '../Components/About'
 import Offers from '../Components/Offers'
-import PartnershipCareer from '../Components/PartnershipCareer'
+import Partnership from '../Components/Partnership'
 import Contact from '../Components/Contact'
 
 const Home = () => {
@@ -10,9 +10,7 @@ const Home = () => {
     <div>
       <Hero />
       <About />
-      <Offers />
-      <PartnershipCareer />
-      <Contact />
+      <Partnership />
     </div>
   )
 }

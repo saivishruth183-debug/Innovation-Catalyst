@@ -6,9 +6,10 @@ import Login from './Components/Login'
 import Home from './Pages/Home'
 import About from './Components/About'
 import Offers from './Components/Offers'
-import PartnershipCareer from './Components/PartnershipCareer'
 import Contact from './Components/Contact'
 import ScrollToTop from './Pages/ScrolltoTop'
+import Career from './Pages/Career'
+import Catalyst from './Pages/Catalyst'
 
 const App = () => {
   return (
@@ -20,8 +21,9 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/offer" element={<Offers />} />
-        <Route path="/career" element={<PartnershipCareer />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/catalyst" element={<Catalyst />} />
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer/>
