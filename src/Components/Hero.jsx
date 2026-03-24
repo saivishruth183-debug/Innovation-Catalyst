@@ -47,11 +47,19 @@ const Card = ({ title, description, image, tag, route }) => (
       <p className="text-slate-600 leading-relaxed mb-8 flex-grow">
         {description}
       </p>
-      {/* Wrap button in Link for routing */}
-      <Link to={route} className="flex items-center gap-2 text-violet-700 font-bold hover:gap-3 transition-all mt-auto w-fit group/btn cursor-pointer">
-        Learn More 
-        <ArrowUpRight size={20} className="group-hover/btn:rotate-45 transition-transform" />
-      </Link>
+      {/* Show Learn More only for Catalyst Student Development */}
+      {route ? (
+        <Link to={route} className="flex items-center gap-2 text-violet-700 font-bold hover:gap-3 transition-all mt-auto w-fit group/btn cursor-pointer">
+          Learn More 
+          <ArrowUpRight size={20} className="group-hover/btn:rotate-45 transition-transform" />
+        </Link>
+      ) : (
+        // <Link to={route} className="flex items-center gap-2 text-violet-700 font-bold hover:gap-3 transition-all mt-auto w-fit group/btn cursor-pointer">
+        //   Learn More 
+        //   <ArrowUpRight size={20} className="group-hover/btn:rotate-45 transition-transform" />
+        // </Link>
+        null
+      )}
     </div>
   </div>
 );
